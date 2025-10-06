@@ -1,0 +1,139 @@
+/**
+ * XForce Analytics - Dark Theme Extensions
+ * Additional theme-specific styles (extends _common.css and _variables.css)
+ */
+
+/* Navigation - Sharp Black Bar with Red Accents */
+nav,
+.navbar {
+    background: var(--bg-secondary);
+    border-bottom: 3px solid var(--accent-primary);
+    box-shadow: var(--shadow-card);
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    transition: var(--transition-normal);
+    border-left: 3px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: var(--accent-primary);
+    border-left-color: var(--accent-primary);
+    background: var(--bg-card);
+}
+
+.nav-link.active {
+    color: var(--white);
+    background: var(--accent-primary);
+    border-left-color: var(--accent-secondary);
+}
+
+/* Hero Section - Black with Red Accents */
+.hero {
+    background: var(--bg-secondary);
+    border-bottom: 4px solid var(--accent-primary);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 4px 4px 0 var(--accent-primary);
+}
+
+.hero-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Analytics Hub - Sharp Design */
+.analytics-hub {
+    background: var(--bg-primary);
+    min-height: 100vh;
+}
+
+.hub-header {
+    background: var(--accent-primary);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--accent-secondary);
+    margin-bottom: 2rem;
+}
+
+.hub-tabs {
+    display: flex;
+    gap: 0;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-secondary);
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.hub-tabs .tab {
+    padding: 1rem 1.5rem;
+    background: transparent;
+    color: var(--text-secondary);
+    border: none;
+    border-right: 1px solid var(--border-secondary);
+    cursor: pointer;
+    transition: var(--transition-normal);
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hub-tabs .tab:last-child {
+    border-right: none;
+}
+
+.hub-tabs .tab:hover {
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.hub-tabs .tab.active {
+    background: var(--accent-primary);
+    color: var(--white);
+    border-bottom: 3px solid var(--accent-secondary);
+}
+
+/* Chart Container */
+.chart-container {
+    background: var(--bg-card);
+    padding: 2rem;
+    border: 2px solid var(--border-secondary);
+}
+
+/* Project Funding */
+.project-funding {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--accent-primary);
+    font-family: var(--font-family-impact);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hub-tabs {
+        flex-direction: column;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,4 @@
+[build]
+# Use SQLx offline mode for compilation
+# This allows building without a database connection
+rustflags = ["--cfg", "sqlx_offline"]

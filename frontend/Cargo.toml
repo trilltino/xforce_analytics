@@ -1,0 +1,60 @@
+[package]
+name = "xforce-frontend"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# Core Yew
+yew = { workspace = true }
+yew-router = { workspace = true }
+
+# WASM bindings
+wasm-bindgen = { workspace = true }
+wasm-bindgen-futures = { workspace = true }
+js-sys = "0.3"
+
+# HTTP & Networking
+gloo = { workspace = true }
+gloo-net = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# Error handling
+console_error_panic_hook = "0.1"
+getrandom = { version = "0.2", features = ["js"] }
+
+# Shared types
+shared = { path = "../shared", default-features = false }
+
+# Plotly for charts
+plotly = "0.13"
+yew-hooks = "0.3"
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+    "console",
+    "Window",
+    "Document",
+    "Element",
+    "HtmlElement",
+    "HtmlInputElement",
+    "HtmlSelectElement",
+    "HtmlButtonElement",
+    "HtmlFormElement",
+    "EventTarget",
+    "Event",
+    "InputEvent",
+    "MouseEvent",
+    "Storage",
+    "Headers",
+    "Request",
+    "RequestInit",
+    "RequestMode",
+    "Response",
+]

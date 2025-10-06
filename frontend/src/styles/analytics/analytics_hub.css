@@ -1,0 +1,346 @@
+/**
+ * Intelligence Hub - Analytics-specific styles
+ * Uses shared variables and common components
+ */
+
+/* Main Container */
+.intelligence-hub {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    padding: var(--spacing-xl);
+    color: var(--white);
+}
+
+/* Header */
+.hub-header {
+    background: var(--accent-primary);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    text-align: center;
+    border-bottom: 4px solid var(--accent-secondary);
+    margin-bottom: var(--spacing-xl);
+}
+
+.hub-header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--white);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 4px 4px 0 var(--bg-primary);
+}
+
+.hub-subtitle {
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-top: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+/* Content */
+.hub-content {
+    background: var(--bg-card);
+    border: 2px solid var(--border-secondary);
+    padding: var(--spacing-xl);
+    min-height: 600px;
+    box-shadow: var(--shadow-card);
+}
+
+.feature-container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+.feature-container h2 {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-left: 6px solid var(--accent-primary);
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.feature-desc {
+    color: var(--text-tertiary);
+    margin-bottom: var(--spacing-xl);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Filter Panel */
+.filter-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-secondary);
+    margin-bottom: var(--spacing-xl);
+}
+
+.filter-select,
+.filter-input {
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border-secondary);
+    color: var(--white);
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: var(--transition-normal);
+    font-family: var(--font-family);
+}
+
+.filter-select:focus,
+.filter-input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: inset 0 0 0 2px var(--accent-primary);
+}
+
+/* Tables */
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border: 2px solid var(--border-secondary);
+    margin-top: var(--spacing-md);
+}
+
+.projects-table .funding-amount {
+    color: var(--accent-primary);
+    font-weight: 900;
+    font-size: 1.1rem;
+    font-family: var(--font-family-impact);
+}
+
+/* Gap Analysis Grid */
+.gap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.gap-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-secondary);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-normal);
+}
+
+.gap-card:hover {
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-hover);
+    transform: translateX(4px);
+}
+
+.gap-card h3 {
+    color: var(--accent-primary);
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 var(--spacing-md);
+    letter-spacing: 1px;
+}
+
+.gap-card p {
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: var(--spacing-sm) 0;
+}
+
+.gap-opportunity {
+    color: var(--accent-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-top: var(--spacing-md);
+}
+
+/* Calculator Layout */
+.calculator-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.calculator-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.calc-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.calc-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.calc-select,
+.calc-input {
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border-secondary);
+    color: var(--white);
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: var(--transition-normal);
+    font-family: var(--font-family);
+}
+
+.calc-select:focus,
+.calc-input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: inset 0 0 0 2px var(--accent-primary);
+}
+
+/* Calculator Results */
+.calculator-results {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.result-card-main {
+    background: var(--accent-primary);
+    border: 3px solid var(--accent-secondary);
+    padding: var(--spacing-xl);
+    box-shadow: 0 6px 0 rgba(255, 0, 0, 0.5);
+}
+
+.result-label-main {
+    font-size: 0.9rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.result-value-large {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--white);
+    font-family: var(--font-family-impact);
+    letter-spacing: 2px;
+}
+
+.result-card-secondary {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-secondary);
+    padding: var(--spacing-lg);
+}
+
+.result-label-secondary {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.result-value-secondary {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--accent-primary);
+    font-family: var(--font-family-impact);
+}
+
+/* Social Intelligence Grid */
+.social-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.social-stat-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-secondary);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-normal);
+}
+
+.social-stat-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.social-count {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--accent-primary);
+    font-family: var(--font-family-impact);
+    margin: var(--spacing-sm) 0;
+}
+
+/* Geographic Trends Grid */
+.geo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.geo-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-secondary);
+    border-left: 4px solid var(--accent-primary);
+    padding: var(--spacing-lg);
+    transition: var(--transition-normal);
+}
+
+.geo-card:hover {
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-card);
+    transform: translateX(4px);
+}
+
+.geo-funding {
+    font-size: 2.5rem;
+    color: var(--accent-primary);
+    font-weight: 900;
+    font-family: var(--font-family-impact);
+    margin: var(--spacing-sm) 0;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .calculator-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hub-header h1 {
+        font-size: 2rem;
+    }
+
+    .filter-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .result-value-large {
+        font-size: 2.5rem;
+    }
+}

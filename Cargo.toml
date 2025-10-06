@@ -1,0 +1,87 @@
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace]
+resolver = "2"
+members = [
+    # -- Shared Types
+    "shared",
+
+    # -- Backend Libraries
+    "backend/libs/lib-utils",
+    "backend/libs/lib-rpc",
+    "backend/libs/lib-auth",
+    "backend/libs/lib-core",
+    "backend/libs/lib-web",
+
+    # -- Backend Services
+    "backend/services/web-server",
+
+    # -- Frontend (Yew WASM)
+    "frontend",
+]
+
+# Fast dev builds
+[profile.dev]
+opt-level = 1
+debug = true
+incremental = true
+
+# Optimize deps, not your code
+[profile.dev.package."*"]
+opt-level = 3
+debug = false
+
+[workspace.dependencies]
+# -- Core
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_with = { version = "3", features = ["time_0_3"] }
+thiserror = "2.0"
+anyhow = "1.0"
+derive_more = { version = "1.0.0", features = ["from", "display", "into"] }
+
+# -- Database
+modql = { version = "0.4", features = ["with-sea-query"] }
+sqlx = { version = "0.8", features = ["macros", "runtime-tokio-rustls", "postgres", "uuid", "chrono"] }
+sea-query = "0.32"
+sea-query-binder = { version = "0.7", features = ["sqlx-postgres", "with-uuid", "with-time"] }
+
+# -- Web
+axum = { version = "0.8", features = ["macros"] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["fs", "cors", "trace"] }
+tower-cookies = "0.11"
+
+# -- Async
+tokio = { version = "1.45", features = ["full"] }
+
+# -- Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# -- Time
+time = { version = "0.3", features = ["formatting", "parsing", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+# -- Auth & Security
+argon2 = { version = "0.5", features = ["std"] }
+bcrypt = "0.16"
+rand = "0.8"
+uuid = { version = "1.0", features = ["v4", "serde", "js"] }
+base64 = "0.22"
+
+# -- Config
+dotenvy = "0.15"
+
+# -- JSON-RPC (optional)
+rpc-router = { version = "0.2.0" }
+
+# -- Yew & WASM
+yew = { version = "0.21", features = ["csr"] }
+yew-router = "0.18"
+gloo = "0.11"
+gloo-net = { version = "0.6", features = ["http"] }
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = "0.3"

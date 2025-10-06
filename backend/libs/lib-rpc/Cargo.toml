@@ -1,0 +1,11 @@
+[package]
+name = "lib-rpc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# Optional: Can add rpc-router if needed later
+# rpc-router = { workspace = true }

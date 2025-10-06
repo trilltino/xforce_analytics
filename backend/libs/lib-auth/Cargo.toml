@@ -1,0 +1,16 @@
+[package]
+name = "lib-auth"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+argon2 = { workspace = true }
+bcrypt = { workspace = true }
+rand = { workspace = true }
+thiserror = { workspace = true }
+uuid = { workspace = true }
+base64 = { workspace = true }
+serde = { workspace = true }
+sha2 = "0.10"
+
+lib-utils = { path = "../lib-utils" }

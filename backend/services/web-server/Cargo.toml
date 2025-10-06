@@ -1,0 +1,39 @@
+[package]
+name = "web-server"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "web-server"
+path = "src/main.rs"
+
+[lib]
+name = "web_server"
+path = "src/lib.rs"
+
+[dependencies]
+# Workspace dependencies
+axum = { workspace = true }
+tokio = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+tower-cookies = { workspace = true }
+sqlx = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+dotenvy = { workspace = true }
+
+# Internal dependencies
+shared = { path = "../../../shared" }
+lib-core = { path = "../../libs/lib-core" }
+lib-auth = { path = "../../libs/lib-auth" }
+lib-utils = { path = "../../libs/lib-utils" }
+lib-web = { path = "../../libs/lib-web" }
+
+[dev-dependencies]

@@ -1,0 +1,12 @@
+[package]
+name = "lib-utils"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+base64 = { workspace = true }
+uuid = { workspace = true }
+time = { workspace = true }
+chrono = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
